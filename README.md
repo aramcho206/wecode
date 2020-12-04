@@ -58,12 +58,15 @@ To https://github.com/aramcho206/wecode.git
 aramcho@Aramui-MacBookPro wecode % git branch
 * main
 aramcho@Aramui-MacBookPro wecode % git branch feature/readme
+    <!-- feature/readme branch created -->
 aramcho@Aramui-MacBookPro wecode % git branch
   feature/readme
 * main
 aramcho@Aramui-MacBookPro wecode % git checkout feature/readme
 M       test.js
 Switched to branch 'feature/readme'
+       <!--  moved to newly created branch -->
+
 aramcho@Aramui-MacBookPro wecode % git branch
 * feature/readme
   main
@@ -72,3 +75,39 @@ aramcho@Aramui-MacBookPro wecode % ls
 README.md       test.js
 aramcho@Aramui-MacBookPro wecode % 
 
+aramcho@Aramui-MacBookPro wecode % git add .
+aramcho@Aramui-MacBookPro wecode % git commit -m "read me file update"
+    <!-- added and commited feature/readme branch and README.md file -->
+
+[feature/readme 022323d] read me file update
+ Committer: Aram Cho <aramcho@Aramui-MacBookPro.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 2 files changed, 75 insertions(+)
+ create mode 100644 README.md
+aramcho@Aramui-MacBookPro wecode % git push origin feature/readme
+    <!-- pushed to remote github -->
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 1.20 KiB | 1.20 MiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'feature/readme' on GitHub by visiting:
+remote:      https://github.com/aramcho206/wecode/pull/new/feature/readme
+remote: 
+To https://github.com/aramcho206/wecode.git
+ * [new branch]      feature/readme -> feature/readme
+aramcho@Aramui-MacBookPro wecode %    
